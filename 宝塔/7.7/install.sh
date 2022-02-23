@@ -716,7 +716,7 @@ echo "
 "
 while [ "$go" != 'y' ] && [ "$go" != 'n' ]
 do
-	read -p "Do you want to install Bt-Panel to the $setup_path directory now?(y/n): " go;
+	read -p "你是不是要安装宝塔面板?安装请按y，不安装按n: " go;
 done
 
 if [ "$go" == 'n' ];then
@@ -726,7 +726,7 @@ fi
 Install_Main
 echo > /www/server/panel/data/bind.pl
 echo -e "=================================================================="
-echo -e "\033[32mCongratulations! Installed successfully!\033[0m"
+echo -e "下载成功"
 echo -e "=================================================================="
 echo  "外网面板地址: http://${getIpAddress}:${panelPort}${auth_path}"
 echo  "内网面板地址: http://${LOCAL_IP}:${panelPort}${auth_path}"
